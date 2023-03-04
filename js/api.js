@@ -5,8 +5,7 @@ const loadData = () => {
       .then((res) => res.json())
       .then((data) => displayData(data.data.tools.slice(0,6)));
   };
-//   loadSpinner();
-  loadData();
+//   loadSpinner(true);
   const displayData = (data) => {
     // Get the container
     const container = document.getElementById("card-container");
@@ -127,10 +126,12 @@ const loadData = () => {
       </ul>
     </div>
     <div>
-      <h1 class=" font-bold text-lg">Integration</h1>
-      <ul class="text-slate-500 list-disc p-4">
-      ${FeaturesData}
-      </ul>
+        <h1 class=" font-bold text-lg">Integration</h1>
+            <ul class="text-slate-500 list-disc p-4">
+                <li>${integrations[0] ? integrations[0] : 'No Data Found'}</li>
+                <li>${integrations[1] ? integrations[1] : 'No Data Found'}</li>
+                <li>${integrations[2] ? integrations[2] : 'No Data Found'}</li>
+            </ul>
     </div>
   </div>
   </div>
@@ -152,6 +153,7 @@ const loadData = () => {
   
   };
   
+// See More Function-------//
   const showAll = () => {
     const URL = `https://openapi.programming-hero.com/api/ai/tools`;
     fetch(URL)
