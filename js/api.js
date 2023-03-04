@@ -12,7 +12,7 @@ const loadData = () => {
     container.innerHTML = ``;
   
     // For each element from array
-    data.forEach((card)) => {
+    data.forEach((card) => {
       // Destructing properties----------//
       const { name, description, image, published_in, features, id } = card;
     }}
@@ -113,4 +113,23 @@ class="bg-red-50 lg:p-5 w-fit lg:w-[440px] rounded-lg border-2 border-red-400 p-
   <div class="lg:w-32 bg-white p-5 rounded-lg">
     <h1 class="text-red-500">${pricing[2].price} <br>${pricing[2].plan}</h1>
   </div>
+</div>
+
+<!-- --- -->
+<div class="flex justify-evenly lg:flex-row flex-col">
+  <div>
+    <h1 class=" font-bold text-lg">Features</h1>
+    <ul class="text-slate-500 list-disc p-2">
+      <li>${features}</li>
+      <li>some text</li>
+      <li>some text</li>
+    </ul>
+  </div>
+  <div>
+    <h1 class=" font-bold text-lg">Integration</h1>
+    <ul class="text-slate-500 list-disc p-4">
+    ${FeaturesData}
+    </ul>
+  </div>
+</div>
 </div>
