@@ -54,3 +54,28 @@ const showModal = (id) => {
     .then((res) => res.json())
     .then((data) => displayModalData(data.data));
 };
+
+// Display modal data into modal--------------------
+
+const displayModalData = (data) => {
+    // A function that returns a string
+    const templateFunction = () => {
+      if (accuracy.score) {
+        template = `<p id="accuracy" class="absolute top-6 right-7 bg-red-600 font-semibold text-white py-2 px-3 rounded-lg">${
+          accuracy.score * 100 + " " + "Accuracy"
+        }</p>`;
+      } else {
+        template = "";
+      }
+      return template;
+    };
+    // Destructing from object------------------------
+    const {
+      description,
+      pricing,
+      image_link,
+      features,
+      integrations,
+      input_output_examples,
+      accuracy,
+    } = data;
