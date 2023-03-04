@@ -79,3 +79,15 @@ const displayModalData = (data) => {
       input_output_examples,
       accuracy,
     } = data;
+
+    // Add info into the modal -----------------------
+
+  // Feature section data Loop out
+  const FeaturesData = Object.values(features).forEach((element) => {
+    console.log(element);
+    let featuresNew = "";
+    for (const feature_1 of element.feature_name) {
+      featuresNew += `<li> ${feature_1} </li>`;
+      return featuresNew;
+    }
+  });
