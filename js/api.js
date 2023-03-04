@@ -46,3 +46,11 @@ const loadData = () => {
     loadSpinner(false);
   });
 };
+
+// show modal data from api
+const showModal = (id) => {
+  const URL = `https://openapi.programming-hero.com/api/ai/tool/${id}`;
+  fetch(URL)
+    .then((res) => res.json())
+    .then((data) => displayModalData(data.data));
+};
