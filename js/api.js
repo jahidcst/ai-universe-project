@@ -44,8 +44,7 @@ const loadData = () => {
     </div>
         `;
     loadSpinner(false);
-  });
-};
+ ;
 
 // show modal data from api
 const showModal = (id) => {
@@ -151,3 +150,12 @@ ${templateFunction()}
   `;
 
 };
+
+const showAll = () => {
+    const URL = `https://openapi.programming-hero.com/api/ai/tools`;
+    fetch(URL)
+      .then((res) => res.json())
+      .then((data) => displayData(data.data.tools));
+      const showAllButton = document.getElementById('show-all')
+      showAllButton.classList.add('hidden')
+  }
