@@ -91,3 +91,26 @@ const displayModalData = (data) => {
       return featuresNew;
     }
   });
+  const modalContainer = document.getElementById("modal");
+  modalContainer.innerHTML = `
+  <div
+  class=" relative flex gap-3 modal-box w-11/12 max-w-5xl overflow-y-scroll justify-center flex-col lg:flex-row h-fit"
+  >
+  <label for="my-modal-5" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+  <div
+class="bg-red-50 lg:p-5 w-fit lg:w-[440px] rounded-lg border-2 border-red-400 p-5  "
+>
+<h1 id="modal-title" class="text-lg font-semibold lg:pt-0 pt-96">${description}</h1>
+<div
+  class="flex font-semibold gap-2 py-4  text-center justify-center text-base lg:flex-row flex-col"
+>
+  <div class="lg:w-32 bg-white p-5 rounded-lg ">
+    <h1 class="text-green-500">${pricing[0].price} <br>${pricing[0].plan}</h1>
+  </div>
+  <div class="lg:w-32 bg-white p-5 rounded-lg">
+    <h1 class="text-orange-500">${pricing[1].price} <br>${pricing[1].plan}</h1>
+  </div>
+  <div class="lg:w-32 bg-white p-5 rounded-lg">
+    <h1 class="text-red-500">${pricing[2].price} <br>${pricing[2].plan}</h1>
+  </div>
+</div>
