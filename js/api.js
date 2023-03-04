@@ -133,3 +133,21 @@ class="bg-red-50 lg:p-5 w-fit lg:w-[440px] rounded-lg border-2 border-red-400 p-
   </div>
 </div>
 </div>
+
+<!--  ------------- -->
+<div class="lg:w-[440px] w-fit border-2 rounded-lg text-center p-5 space-y-2 relative">
+<img
+  class="mx-auto  rounded-lg w-fit"
+  src="${image_link[0]}"
+  alt=""
+/>
+<h1 class="font-bold">${input_output_examples[0].input}</h1>
+<p>${input_output_examples[1].output}</p>
+<div>
+${templateFunction()}
+</div>
+</div>
+</div>
+  `;
+
+};
